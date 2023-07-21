@@ -1,3 +1,9 @@
+/*--------Prevent Context Menu Right Click --------------*/
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+
 const subj = document.getElementById('subject')
 const des = document.getElementById('details')
 const but = document.getElementById('sub')
