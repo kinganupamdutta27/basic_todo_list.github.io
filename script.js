@@ -11,9 +11,12 @@ but.addEventListener('click',(e)=>{
   console.log(subj.value, des.value)
   let x = subj.value
   let y = des.value
-  y=y + "\n TimeStamp: " + timedate()
+  let y1 = `<br> TimeStamp: ${timedate()}`
+  y=y+y1
+  //y=y + "\n TimeStamp: " + timedate()
   e.preventDefault()
   localStorage.setItem(x,y)
+  location.reload();
 })
 
 
@@ -28,8 +31,8 @@ for(key in localStorage){
     break;
   }
   inn+=`<tr>
-      <td>${key}</td>
-      <td>${localStorage[key]}</td>
+      <td class="keys">${key}</td>
+      <td class="datas">${localStorage[key]}</td>
     </tr>`
   k+=1
   console.log(k)
@@ -42,12 +45,14 @@ dele.addEventListener('click',(e)=>{
   let y = des.value
   e.preventDefault()
   localStorage.removeItem(x)
+  location.reload();
 })
 dele_all.addEventListener('click',(e)=>{
   let x = subj.value
   let y = des.value
   e.preventDefault()
   localStorage.clear()
+  location.reload();
 })
 function timedate(){
 const MonthsList = [

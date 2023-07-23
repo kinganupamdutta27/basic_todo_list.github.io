@@ -4,11 +4,32 @@ html {
 }
 body{
   overflow-x: hidden;
-  background: #1E9600;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  /*background: #fcce01;  /* fallback for old browsers *//*
+  background: -webkit-linear-gradient(to top, #FF0000, #FFF200, #ffee01);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to top, #FF0000, #FFF200, #d3f800); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082);
+    background-size: 600% 600%;
+    animation: gradient 40s linear infinite;
 }
+
+ @keyframes gradient {
+   0% {
+     background-position: 0% 50%;
+   }
+
+   50% {
+     background-position: 100% 50%;
+   }
+
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
 #f1{
   position: relative;
   left: 50%;
@@ -30,7 +51,9 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-
+#all1{
+  overflow: auto;
+}
 textarea{
   height:200px;
 }
@@ -102,12 +125,14 @@ tr {
 }
 th, td {
 	border-collapse:collapse;
-	border: 2px solid black;
-	padding-top:5px;
-	padding-bottom:5px;
+	/*border: 2px solid rgb(253, 7, 7);*/
+	padding: 15px 15px !important;
   margin: 10px 10px;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 5px;
+  text-align: justify;
+  width: fit-content !important;
+  max-width: 50px !important;
+  word-wrap: break-word;
 }
 .verticalSplit {
 	border-top:none;
@@ -118,4 +143,87 @@ th, td {
 }
 .verticalSplit:last-of-type {
 	border-right:none;
+}
+/*----------------------Input text Style--------------------*/
+#subject{
+  background-color: #000019;
+  font-family: 'Lugrasimo', cursive;
+  color: #ffffff;
+}
+#details{
+  background-color: #0000ff;
+  font-family: 'Tektur', cursive;
+  color: #ffffff;
+  max-height: 200px;
+}
+/*---------------output Table text Style-----------------*/
+.keys{
+  background-color: #000000 !important;
+  font-family: 'Lugrasimo', cursive !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+.datas{
+    background-color: #000008;
+    font-family: 'Tektur', cursive;
+    color: #ffffff !important;
+}
+/*-------------- Heart Icon & Social Media and Email footer----------------------------- */
+.soc {
+  margin: 5px 5px;
+  padding: 5px 5px;
+  height: 54px;
+  width: auto;
+  border: 1px solid #000019;
+  border-radius: 15px;
+}
+
+.soc:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.soc:focus,
+.soc:active {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/*.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}*/
+
+.footer {
+  background-color: rgb(238, 197, 197);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px !important;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heart {
+  color: red;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #777;
+  font-size: 20px;
 }
